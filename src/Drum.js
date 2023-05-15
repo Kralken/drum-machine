@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from './Button.js';
 import Settings from './Settings.js';
 import data from './Data.js';
@@ -23,7 +23,7 @@ export default function Drum() {
             setDisplay={setDisplay}
             status={status}
             volume={volume}
-            isOn={isOn}
+            isOn={ isOn }
         />
     );
 

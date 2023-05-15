@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 export default function Settings({volume, volumeChange, display, setDisplay, isOn, setIsOn, status, setStatus}) {
 
@@ -50,13 +50,20 @@ export default function Settings({volume, volumeChange, display, setDisplay, isO
                 >
                 </input>
             </div>
-            <div className="setting horizontal-setting">
+            <div
+                className="setting horizontal-setting"
+            >
                 <div
                     className="on-off-setting-container"
                     onClick={handleOnOffToggle}
                 >
-                    <div className="horizontal-child on-off-setting">
-                        <div className="on-off-status" style={{backgroundColor: isOn ? "red" : "white"}}></div>
+                    <div
+                        className="horizontal-child on-off-setting"
+                    >
+                        <div
+                            className="on-off-status"
+                            style={ { backgroundColor: isOn ? "red" : "white" } }
+                        ></div>
                     </div>
                     <p>{isOn ? "ON" : "OFF"}</p>
                 </div>
@@ -65,7 +72,9 @@ export default function Settings({volume, volumeChange, display, setDisplay, isO
                     onClick={isOn ? handleTypeChange : null}
                     style={{"justifyContent": status === 1 ? "left" : "right"}}
                 >
-                    <div className="inner-set-type"></div>
+                    <div
+                        className="inner-set-type"
+                    ></div>
                 </div>
             </div>
         </div>
